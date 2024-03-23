@@ -33,9 +33,26 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    //RecyclerView
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+    //room
+    implementation ("androidx.room:room-runtime:2.3.0")
+    annotationProcessor ("androidx.room:room-compiler:2.3.0")
+
+    //WorkManager
+    implementation ("android.arch.work:work-runtime:1.0.0-alpha02")
+
+
+    //RecyclerView
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+    implementation ("com.github.javafaker:javafaker:1.0.2")
+    implementation ("com.github.bumptech.glide:glide:4.14.2")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
